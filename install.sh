@@ -1,12 +1,17 @@
 #!/bin/bash
-# Installer for eduslip-ok
+# Installer for eduslip-ok (non-root version)
 
-# Step 1: Download the main script from your GitHub
-sudo curl -L -o /usr/local/bin/eduslip-ok https://raw.githubusercontent.com/vs-code-term/slips/main/eduslip-ok.sh
+INSTALL_PATH="$HOME/.local/bin"
 
-# Step 2: Make it executable
-sudo chmod +x /usr/local/bin/eduslip-ok
+mkdir -p "$INSTALL_PATH"
+curl -L -o "$INSTALL_PATH/eduslip-ok" https://raw.githubusercontent.com/vs-code-term/slips/main/eduslip-ok.sh
+chmod +x "$INSTALL_PATH/eduslip-vs"
 
-# Step 3: Success message
+# Add to PATH if not already there
+if [[ ":$PATH:" != ":$INSTALL_PATH:" ]]; then
+    echo "export PATH=\$PATH:$INSTALL_PATH" >> ~/.bashrc
+    echo "✅ Added $INSTALL_PATH to PATH. Please restart terminal or run: source ~/.bashrc"
+fi
+
 echo "✅ eduslip-ok installed successfully!"
-echo "You can now use it like: eduslip-ok <subject> <slip-no>"
+echo "Now you can run: eduslip-ok <subject> <slip-no>"
