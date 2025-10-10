@@ -5,7 +5,7 @@ INSTALL_PATH="$HOME/.local/bin"
 
 mkdir -p "$INSTALL_PATH"
 curl -L -o "$INSTALL_PATH/eduslip-ok" https://raw.githubusercontent.com/vs-code-term/slips/main/eduslip-ok.sh
-chmod +x "$INSTALL_PATH/eduslip-vs"
+chmod +x "$INSTALL_PATH/eduslip-ok"
 
 # Add to PATH if not already there
 if [[ ":$PATH:" != ":$INSTALL_PATH:" ]]; then
