@@ -1,15 +1,15 @@
 #!/bin/bash
 # eduslip-vs <subject> <slip-no>
-# Example: eduslip-vs os 11
+# Example: eduslip-ok os 11
 
 SUBJECT=$1
 SLIP=$2
-REPO="https://api.github.com/repos/gc-dev-term/slips/contents/${SUBJECT}/slip${SLIP}"
+REPO="https://api.github.com/repos/vs-code-term/slips/contents/${SUBJECT}/slip${SLIP}"
 
 DEST="$HOME"
 
 if [ -z "$SUBJECT" ] || [ -z "$SLIP" ]; then
-    echo "Usage: eduslip-vs <subject> <slip-no>"
+    echo "Usage: eduslip-ok <subject> <slip-no>"
     exit 1
 fi
 
