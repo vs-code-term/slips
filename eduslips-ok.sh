@@ -1,5 +1,5 @@
 #!/bin/bash
-# eduslip-vs <subject> <slip-no>
+# eduslip-ok <subject> <slip-no>
 # Example: eduslip-ok os 11
 
 SUBJECT=$1
