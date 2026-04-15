@@ -1,1 +1,0 @@
-Create two lists, one representing subject names and the other representing marks obtained in those subjects. Display the data in a pie chart.
