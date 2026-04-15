@@ -1,0 +1,52 @@
+<html> 
+<head><title>javascript</title> 
+<script type="text/javascript"> 
+function validate() 
+{ 
+var user,pass,ans,ch; 
+ans="true"; 
+user=fl.tl.value; 
+pass=fl.t2.value; 
+if(user.length<8||user.length>15|| pass.length<6|| pass.length>10) 
+{ 
+alert("user name having length 8 to 15 and password length is 6 to 10"); 
+ans="false"; 
+} 
+for(i=0;i<pass.length;i++) 
+{ 
+ch=pass.charAt(i); 
+if(ch==""||ch=="("||ch==")"||ch=="{"||ch=="}" | ch=="?"||ch=="*"||ch=="." ||ch=="," ) 
+{ 
+alert("space and special symbols are not allowed in password"); 
+ans="false";break; 
+} 
+} 
+for(i=0;i<user.length;i++) 
+{ 
+ch=user.charAt(i); 
+if((ch<"a" || ch>"z")&&(ch<0 || ch>9))
+
+    { 
+alert("username contains capital and lower alphabets"); 
+ans="false"; 
+break; 
+} 
+} 
+if(ans=="true") 
+alert("currect user name and password"); 
+else 
+alert("Wrong user name and password, Re-enter "); 
+} 
+</script></head> 
+<body bgcolor="yellow"> 
+<h1 align="center">Validation of Password</h1> 
+<form name="f1" method="post"> 
+Enter your name:- 
+<input type="text" name="t1"><br> 
+Enter password:- 
+<input type="password" name="t2"><br> 
+<center><input type="button" value="validate" onMouseMove="validate()"> 
+<input type="reset" value="reset"></center> 
+</form> 
+</body> 
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Validation</title>
+
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var nationality = document.getElementById("nation").value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "validate.php?name=" + name + "&age=" + age + "&nation=" + nationality, true);
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Voter Details</h2>
+
+Name: <input type="text" id="name"><br><br>
+Age: <input type="number" id="age"><br><br>
+Nationality: <input type="text" id="nation"><br><br>
+
+<button onclick="validateForm()">Submit</button>
+
+<div id="result"></div>
+
+</body>
+</html>

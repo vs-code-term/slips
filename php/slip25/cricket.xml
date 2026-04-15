@@ -1,0 +1,14 @@
+cricket.xml 
+<?xml version="1.0" encoding="UTF-8"?> 
+<CricketTeam> 
+<Team Country="Austrelia"> 
+<Player>rohit</Player> 
+<Runs>100</Runs> 
+<Wickets>10</Wickets> 
+</Team> 
+<Team Country="India"> 
+<Player>virat</Player> 
+<Runs>50</Runs> 
+<Wickets>5</Wickets> 
+</Team> 
+</CricketTeam>

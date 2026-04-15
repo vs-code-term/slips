@@ -1,0 +1,34 @@
+</Book> 
+Save the file as “Bookcategory. 
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+
+
+<Book> 
+<yoga>
+<Book_Title> Happy Yoga </Book_Title> 
+<Book_Author> Ramdev Baba </Book_Author> 
+<Book_Price> 4000 </Book_Price>
+</yoga> 
+
+
+
+
+<story> 
+<Book_Title> Ramayan </Book_Title> 
+<Book_Author> Ramanand Sagar </Book_Author> 
+<Book_Price> 5000 </Book_Price> 
+</story> 
+
+
+
+
+
+
+<Technical> 
+<Book_Title> PHP </Book_Title> 
+<Book_Author> Gajanan Joshi </Book_Author> 
+<Book_Price> 4500 </Book_Price> 
+</Technical> 
+</Book>

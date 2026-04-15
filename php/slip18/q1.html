@@ -1,0 +1,24 @@
+<html> 
+<head><title>Fibonacci series</title></head> 
+<body> 
+<form name="frm1"> 
+<h1> Fibonacci series </h1> 
+<input type="button" value="Display Fibonacci series" onclick="fibo()"> 
+</form> 
+<script type="text/javascript"> 
+function fibo() 
+{ 
+var a,b,c; 
+a=1; b=1; 
+document.write(a + "<br>" + b + "<br>"); 
+for(i=1;i<=10;i++) 
+
+{ 
+c=a+b; 
+document.write(c + "<br>"); a=b; 
+b=c; 
+} 
+} 
+</script> 
+</body> 
+</html>

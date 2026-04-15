@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+
+    <script>
+        function showDetails() {
+            var eno = document.getElementById("emp").value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "getdata.php?eno=" + eno, true);
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Select Employee</h2>
+
+<select id="emp" onchange="showDetails()">
+    <option value="">Select</option>
+    <option value="1">Rahul</option>
+    <option value="2">Amit</option>
+    <option value="3">Sneha</option>
+    <option value="4">Priya</option>
+</select>
+
+<div id="result"></div>
+
+</body>
+</html>

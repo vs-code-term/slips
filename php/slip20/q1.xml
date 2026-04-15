@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<studentinfo> 
+
+
+<student> 
+<studno>1 </studno> 
+<sname> Gajanan </sname> 
+<studage> 51 </studage> 
+</student> 
+
+
+
+<student> 
+<studno>2 </studno> 
+<sname> Gautam </sname> 
+<studage> 46 </studage> 
+</student> 
+
+
+<student> 
+<studno>3 </studno> 
+<sname> Kishor </sname> 
+<studage> 47 </studage> 
+</student> 
+
+<student> 
+<studno>4 </studno> 
+<sname> Jagdish </sname> 
+<studage> 49 </studage> 
+</student> 
+
+
+<student> 
+<studno>5 </studno> 
+<sname> Mahesh </sname> 
+<studage> 47 </studage> 
+</student> 
+</studentinfo> 
