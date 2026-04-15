@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<iteminfo> 
+    <item> 
+        <itemname>Soap</itemname> 
+        <itemrate>50</itemrate> 
+        <itemquantity>100</itemquantity> 
+    </item> 
+    <item> 
+        <itemname>Pen</itemname> 
+        <itemrate>75</itemrate> 
+        <itemquantity>1000</itemquantity> 
+    </item> 
+    <item> 
+        <itemname>Notebook</itemname> 
+        <itemrate>25</itemrate> 
+        <itemquantity>500</itemquantity> 
+    </item> 
+    <item> 
+        <itemname>Pensil</itemname> 
+        <itemrate>10</itemrate> 
+        <itemquantity>1500</itemquantity> 
+    </item> 
+    <item> 
+        <itemname>handwash</itemname> 
+        <itemrate>25</itemrate> 
+        <itemquantity>600</itemquantity> 
+    </item> 
+</iteminfo>

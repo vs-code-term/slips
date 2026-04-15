@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movieinfo>
+    <movie>
+        <MovieNo>1</MovieNo>
+        <MovieTitle>DDLJ</MovieTitle>
+        <ActorName>Shah Rukh Khan, Kajol</ActorName>
+        <ReleaseYear>2000</ReleaseYear>
+    </movie>
+
+    <movie>
+        <MovieNo>2</MovieNo>
+        <MovieTitle>Murder</MovieTitle>
+        <ActorName>John Abraham</ActorName>
+        <ReleaseYear>2002</ReleaseYear>
+    </movie>
+
+    <movie>
+        <MovieNo>3</MovieNo>
+        <MovieTitle>Singham</MovieTitle>
+        <ActorName>Ajay Devgn</ActorName>
+        <ReleaseYear>2020</ReleaseYear>
+    </movie>
+</movieinfo>
