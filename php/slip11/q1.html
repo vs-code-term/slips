@@ -1,0 +1,32 @@
+<html> 
+<head> 
+<title>Test change program</title> 
+</head> 
+<body> 
+<form name="frm1"> 
+<h1> to Change text font color </h1> 
+Enter student name:- 
+<input type="text" id="demo" name="t1" onblur="check()"> 
+</form> 
+<script type="text/javascript"> 
+function check() 
+{ 
+alert("hello"); 
+var a=frm1.t1l.value; 
+if(a.length==0) 
+{ 
+var x = document.createElement("IMG"); 
+x.setAttribute("src", "C:\Users\Student\Pictures\naturel.jpg"); 
+x.setAttribute("width", "304"); 
+x.setAttribute("height", "228"); 
+x.setAttribute("alt", "The Pulpit Rock"); 
+document.body.appendChild(x); 
+}
+else 
+{
+document.getElementByld("demo").style.color ="blue"; 
+document.getElementByld("demo").style.fontSize = "40";
+}
+}
+</script> 
+</html> 
