@@ -1,0 +1,66 @@
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Customer Search</title> 
+</head> 
+<body> 
+<h1>Search Customer</h1> 
+<form action="CustomerSearchServlet" method="POST"> 
+<label for="customerNumber">Customer Number:</label> 
+<input type="text" id="customerNumber" name="customerNumber" required> 
+<button type="submit">Search</button> 
+</form> 
+</body> 
+</html> 
+import javax.servlet.*; 
+import javax.servlet.http.*; 
+import java.io.*; 
+import java.sql.*; 
+public class CustomerSearchServlet extends HttpServlet { 
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws 
+ServletException, IOException { 
+String customerNumber = request.getParameter("customerNumber"); 
+// Response setup 
+response.setContentType("text/html"); 
+PrintWriter out = response.getWriter(); 
+Connection conn = null; 
+PreparedStatement stmt = null; 
+ResultSet rs = null; 
+try { 
+// Database connection 
+Class.forName("org.postgresql.Driver"); 
+conn = 
+DriverManager.getConnection(“JDBC:postgresql://172.16.6.1/root”,”root”,”suhas@bcs”); 
+// SQL query to search for customer 
+String sql = "SELECT * FROM customers WHERE customer_number = ?"; 
+stmt = conn.prepareStatement(sql); 
+stmt.setString(1, customerNumber); 
+rs = stmt.executeQuery(); 
+if (rs.next()) { 
+// Customer found, display details 
+String name = rs.getString("customer_name"); 
+String address = rs.getString("customer_address"); 
+out.println("<h1>Customer Details</h1>"); 
+out.println("<p><strong>Name:</strong> " + name + "</p>"); 
+out.println("<p><strong>Address:</strong> " + address + "</p>"); 
+} else { 
+// No customer found 
+out.println("<h1>Error</h1>"); 
+out.println("<p>No customer found with the given customer number.</p>"); 
+} 
+} catch (Exception e) { 
+out.println("<h1>Error</h1>"); 
+out.println("<p>An error occurred while retrieving the data.</p>"); 
+e.printStackTrace(); 
+} finally { 
+try { 
+if (rs != null) rs.close(); 
+if (stmt != null) stmt.close(); 
+if (conn != null) conn.close(); 
+} catch (SQLException e) { 
+e.printStackTrace(); 
+} 
+} 
+} 
+}
